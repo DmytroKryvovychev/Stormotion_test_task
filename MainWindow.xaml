@@ -1,0 +1,59 @@
+﻿<Window x:Class="Stormotion_test_task.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Try to win!" Height="700" Width="1000" Loaded="MainWindow_OnLoaded" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid x:Name="MainField" Background="AliceBlue">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Количество спичек игрока" Grid.Column="2" FontSize="20" VerticalAlignment="Top"></TextBlock>
+            <Image Grid.Column="2" Width="30" Source="assets/cat.jpg" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="310,2,0,0"/>
+            <TextBlock x:Name="CountUser" Text="0" FontSize="20" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="350,0,0,0"></TextBlock>
+            <ScrollViewer Height="300" VerticalAlignment="Top" Grid.Column="2" Margin="0,28">
+                <StackPanel Name="UserField">
+                    <TextBlock Text="История ходов игрока:" FontSize="16"></TextBlock>
+                    <TextBlock x:Name="HistoryUser" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="16" TextWrapping="Wrap" ></TextBlock>
+                </StackPanel>
+            </ScrollViewer>
+
+            <TextBlock Text="Количество спичек компьютера" Grid.Column="2" FontSize="20" VerticalAlignment="Bottom" Margin="0,300"></TextBlock>
+            <Image Grid.Column="2" Width="25" Source="assets/ai_cat.png" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="313,0,0,300"/>
+            <TextBlock Grid.Column="2" x:Name="CountComputer" Text="0" FontSize="20" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="350,0,0,300"></TextBlock>
+            <ScrollViewer Height="300" VerticalAlignment="Bottom" Grid.Column="2">
+                <StackPanel Name="AIField">
+                    <TextBlock Text="История ходов компьютера:" FontSize="16"></TextBlock>
+                    <TextBlock x:Name="HistoryAI" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="16" TextWrapping="Wrap" ></TextBlock>
+                </StackPanel>
+            </ScrollViewer>
+            
+            <GridSplitter x:Name="gridSplitter" Grid.Column="1" HorizontalAlignment="Stretch" ResizeDirection="Columns" IsEnabled="False" Height="Auto" Width="3" Background="#FF646262"/>
+            <TextBlock Grid.Column="0" x:Name="nChooseText" HorizontalAlignment="Left" Margin="15,210" FontSize="15" Text="n" VerticalAlignment="Top"/>
+            <TextBox IsEnabled="False" Grid.Column="0" Text="12" Name="nChoose" VerticalAlignment="Top" HorizontalAlignment="Left" Height="25" FontSize="15" Width="100" Margin="10,235" PreviewKeyUp="NChoose_OnPreviewKeyUp" PreviewTextInput="TextBox_OnPreviewTextInput"></TextBox>
+            <TextBlock Grid.Column="0" x:Name="mChooseText" HorizontalAlignment="Left" Margin="155,210,0,0" FontSize="15" Text="m" VerticalAlignment="Top"/>
+            <TextBox IsEnabled="False" Grid.Column="0" Text="3" Name="mChoose" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="15" Height="25" Width="100" Margin="150,235,0,0" PreviewKeyUp="MChoose_OnPreviewKeyUp" PreviewTextInput="TextBox_OnPreviewTextInput"></TextBox>
+            <CheckBox Grid.Column="0"  Name="ExtendedVersion" FontSize="15" Content="Общий режим" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5,180" Checked="ExtendedVersion_OnChecked" Unchecked="ExtendedVersion_OnUnchecked"></CheckBox>
+
+
+            <TextBlock Grid.Column="0" FontSize="15" x:Name="UserChoice" HorizontalAlignment="Left" Margin="10,10" TextWrapping="Wrap" Text="Возьмите спички" VerticalAlignment="Top"/>
+            <TextBox Grid.Column="0" Text="1" FontSize="15" x:Name="Number" VerticalAlignment="Top" HorizontalAlignment="Left" Height="25" Width="120" Margin="10,30" PreviewKeyDown="Number_PreviewKeyDown" PreviewTextInput="TextBox_OnPreviewTextInput"></TextBox>
+
+            <CheckBox Grid.Column="0"  Name="FirstTurn" FontSize="15" Content="Вы хотите ходить первым?" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="5,80" Checked="FirstTurn_OnChecked" Unchecked="FirstTurn_OnUnchecked"></CheckBox>
+            <Button Visibility="Visible" Grid.Column="0" Height="30" Width="120" FontSize="15"  Content="Начать игру" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,110" Name="Start" Click="Start_OnClick"></Button>
+
+            <Button Grid.Column="0" Height="30" Width="120" FontSize="15" Content="Новая игра" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Margin="0,0,0,330" Name="NewGame" Click="NewGame_OnClick"></Button>
+
+            <TextBlock Grid.Column="0" Text="Спички:" TextWrapping="Wrap" HorizontalAlignment="Stretch" TextAlignment="Center" VerticalAlignment="Bottom" FontSize="43" Margin="0,0,0,220"></TextBlock>
+            <TextBlock Grid.Column="0" x:Name="TotalNumber" Text="25" HorizontalAlignment="Stretch" TextAlignment="Center" VerticalAlignment="Bottom" FontSize="43" Margin="0,160"></TextBlock>
+            <TextBlock Grid.Column="0" x:Name="Turn" Text="Ваш ход!" HorizontalAlignment="Stretch" TextAlignment="Center" VerticalAlignment="Bottom" FontSize="35" Margin="0,80"></TextBlock>
+            
+        </Grid>
+    </Grid>
+        
+</Window>

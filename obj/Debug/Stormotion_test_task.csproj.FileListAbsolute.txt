@@ -1,0 +1,14 @@
+C:\Users\Demian\source\repos\Stormotion_test_task\bin\Debug\Stormotion_test_task.exe.config
+C:\Users\Demian\source\repos\Stormotion_test_task\bin\Debug\Stormotion_test_task.exe
+C:\Users\Demian\source\repos\Stormotion_test_task\bin\Debug\Stormotion_test_task.pdb
+C:\Users\Demian\source\repos\Stormotion_test_task\obj\Debug\Stormotion_test_task.csprojAssemblyReference.cache
+C:\Users\Demian\source\repos\Stormotion_test_task\obj\Debug\MainWindow.baml
+C:\Users\Demian\source\repos\Stormotion_test_task\obj\Debug\MainWindow.g.cs
+C:\Users\Demian\source\repos\Stormotion_test_task\obj\Debug\App.g.cs
+C:\Users\Demian\source\repos\Stormotion_test_task\obj\Debug\Stormotion_test_task_MarkupCompile.cache
+C:\Users\Demian\source\repos\Stormotion_test_task\obj\Debug\Stormotion_test_task.g.resources
+C:\Users\Demian\source\repos\Stormotion_test_task\obj\Debug\Stormotion_test_task.Properties.Resources.resources
+C:\Users\Demian\source\repos\Stormotion_test_task\obj\Debug\Stormotion_test_task.csproj.GenerateResource.cache
+C:\Users\Demian\source\repos\Stormotion_test_task\obj\Debug\Stormotion_test_task.csproj.CoreCompileInputs.cache
+C:\Users\Demian\source\repos\Stormotion_test_task\obj\Debug\Stormotion_test_task.exe
+C:\Users\Demian\source\repos\Stormotion_test_task\obj\Debug\Stormotion_test_task.pdb
